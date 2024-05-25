@@ -1,0 +1,104 @@
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: graysacale;
+}
+
+:root{
+  font-family: 'Source Serif 4';
+  font-size: 62.5%;
+}
+
+body{
+  color: #A54328;
+  font-size: 1.6rem;
+  line-height: 1.8rem; 
+}
+
+main{
+  max-width: 32rem;
+  padding: 5.3rem 3.7rem;
+  margin-inline: auto;
+
+  /*
+  a propriedade margin-inline com o valor 'auto' serve para alinhar os elementos ao centro
+  */
+  
+  box-sizing: content-box;
+  
+  /* 
+  Como o box-sizing foi redefinido no seletor geral e também o 
+  padding foi configurado, na área do <main>, somando os valores, ficou abaixo do que foi setado
+  no max-width, foi usado a propriedade box-sizing com o calor content-box para resolver 
+  a questão da área total. 
+  */
+}
+
+
+
+h1{
+  margin-bottom: 4rem ;
+  line-height: 2.8rem;
+}
+img{
+  width: 100%;
+}
+.ingredients p{
+  margin: 3rem 0 4rem;
+}
+
+h2{
+  margin-bottom: 3rem;
+}
+
+.recipe ul{
+  margin-bottom: 2rem;
+}
+
+ul,ol{
+  padding-left: 2.4rem;
+}
+button{
+  font-family: 'Source Serif 4';
+  background-color: #A54328;
+  color: white;
+  padding: .5rem 1.2rem;
+  border: 0;
+  border-radius: .5rem;
+  margin-top: 1.8rem;
+  
+}
+
+@media (min-width:768px) {
+  main{
+    margin-top: 6rem;
+    display: flex;
+    gap: 16rem;
+    max-width: fit-content;
+
+    /*
+    o valor fit-content é para definiar que largura se adaptará ao 
+    tamanho do conteúdo
+    */
+
+  }
+  .recipe{
+    max-width: 43.5rem;
+  }
+  .ingredients{
+    max-width:52.5rem;
+  }
+
+  h1{
+    font-size: 4rem;
+    line-height: 4.3rem;
+    margin-bottom: 6rem;
+  }
+
+  p,li,strong{
+    font-size: 2rem ;
+    line-height: 2.5rem;
+  }
+}
